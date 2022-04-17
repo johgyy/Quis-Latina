@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+
 
 <head>
     <title>Quis Latina</title>
@@ -12,31 +13,31 @@
 </head>
 
 
-<body>
+<body onload="init(); questioncounter();">
     <img id="bgrimg" class="bgrimg" src="img/bgr1.jpg">
 
     <div class="bgrcontainer">
         <div class="bgrquiz">
             <div class="questioncontainer">
                 <h1 class="text-center questionfield">QUIS LATINA</h1>
-                <p class="text-center" id="question">Wie lautet die genaue Übersetzung dieses Satzes?</p>
-                <h2 class="questionfield text-center" id="satz">GALLIA IN PARTES TRES DIVIDITUR.</h2>
+                <p class="text-center" id="questionstyle">Wie lautet die genaue Übersetzung dieses Satzes?</p>
+                <h2 class="questionfield text-center" id="questiontext"></h2>
             </div>
-            <div class="answercontainer">
+            <div id="answercontainer" class="answercontainer">
                 <div class="answerrow">
-                    <button onclick="" class="answerfield" id="answerfield1">Gallien teilt sich in 3 Teile ein</button>
-                    <button onclick="" class="answerfield" id="answerfield2">ANTWORT 2</button>
+                    <button onclick="answer('answer_1')" class="answerfield" id="answer_1">Gallien teilt sich in 3 Teile ein</button>
+                    <button onclick="answer('answer_2')" class="answerfield" id="answer_2">ANTWORT 2</button>
                 </div>
                 <div class="answerrow">
-                    <button onclick="" class="answerfield" id="answerfield3">ANTWORT 3</button>
-                    <button onclick="" class="answerfield" id="answerfield4">ANTWORT 4</button>
+                    <button onclick="answer('answer_3')" class="answerfield" id="answer_3">ANTWORT 3</button>
+                    <button onclick="answer('answer_4')" class="answerfield" id="answer_4">ANTWORT 4</button>
                 </div>
             </div>
-            <div class="question-footer">
+            <div id="question-footer" class="question-footer">
                 <span>
-                    <b>1</b> von <b>5</b> Fragen
+                    <b id="questionnumber"></b> von <b id="amountofquestions">5</b> Fragen
                 </span>
-                <button class="nextquestionbutton">Nächste Frage</button>
+                <button onclick="nextquestion()" id="nextquestionbutton" class="nextquestionbutton" disabled>Nächste Frage</button>
             </div>
         </div>
     </div>
