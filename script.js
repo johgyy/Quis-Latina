@@ -33,20 +33,13 @@ function init() {
 }
 
 function showquestion() {
-    if (currentquestion >= questions.length) {
-        document.getElementById('questionnumber').innerHTML = currentquestion;
-        document.getElementById('question-footer').innerHTML = `
-        <span>
-        <b id="questionnumber">${currentquestion}</b> von <b id="amountofquestions"5>${questions.length}</b> Fragen
-    </span>
-        <button onclick="showendscreen()" id="c" class="nextquestionbutton" disabled><a href="http://johannes-guenther.developerakademie.net/LATINA%20SIMPLEX/">Abschließen</a></button>
-        `;
+    if (currentquestion == questions.length) {
+
+        document.getElementById('question-footer').classList.add('d-none');
+        document.getElementById('answercontainer').classList.add('d-none');
+        document.getElementById('finalscore').classList.remove('d-none')
         resetanswerfields();
-        document.getElementById('answercontainer').innerHTML = `
-        <div class="endscreen">
-            
-        </div>
-        `;
+
     } else {
         let question = questions[currentquestion];  // die variable question ist das array questions an der stelle von der zahl von current question
         document.getElementById('questiontext').innerHTML = question['question'];

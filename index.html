@@ -8,7 +8,7 @@
 
     <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
     <script src="script.js"></script>
-    
+
 
 </head>
 
@@ -25,7 +25,8 @@
             </div>
             <div id="answercontainer" class="answercontainer">
                 <div class="answerrow">
-                    <button onclick="answer('answer_1')" class="answerfield" id="answer_1">Gallien teilt sich in 3 Teile ein</button>
+                    <button onclick="answer('answer_1')" class="answerfield" id="answer_1">Gallien teilt sich in 3 Teile
+                        ein</button>
                     <button onclick="answer('answer_2')" class="answerfield" id="answer_2">ANTWORT 2</button>
                 </div>
                 <div class="answerrow">
@@ -34,13 +35,26 @@
                 </div>
             </div>
             <div id="question-footer" class="question-footer">
-                <span>
+                <span id="questioncountingspan">
                     <b id="questionnumber"></b> von <b id="amountofquestions">5</b> Fragen
                 </span>
-                <button onclick="nextquestion()" id="nextquestionbutton" class="nextquestionbutton" disabled>Nächste Frage</button>
+                <button onclick="nextquestion()" id="nextquestionbutton" class="nextquestionbutton" disabled>Nächste
+                    Frage</button>
+            </div>
+
+            <!-- down here the final score you made -->
+            <div class="d-none" id="finalscore">
+                <span>
+                    <p>Du hast<b>5</b>von<b>5</b>Fragen richtig!</p>
+                </span>
+                <button onclick="showendscreen()" id="" class="nextquestionbutton"><a
+                        href="http://johannes-guenther.developerakademie.net/LATINA%20SIMPLEX/">Zurück zur
+                        Startseite</a></button>
             </div>
         </div>
     </div>
+
+
 
 
 
