@@ -33,28 +33,32 @@ function init() {
 }
 
 function showquestion() {
-    if (currentquestion == questions.length) {
-
-        document.getElementById('question-footer').classList.add('d-none');
-        document.getElementById('answercontainer').classList.add('d-none');
-        document.getElementById('finalscore').classList.remove('d-none')
-        resetanswerfields();
-
+    if (currentquestion == questions.length - 1) {
+        document.getElementById('nextquestionbutton').innerHTML = 'Abschließen'
     } else {
-        let question = questions[currentquestion];  // die variable question ist das array questions an der stelle von der zahl von current question
-        document.getElementById('questiontext').innerHTML = question['question'];
-        document.getElementById('answer_1').innerHTML = question['answer_1'];
-        document.getElementById('answer_2').innerHTML = question['answer_2'];
-        document.getElementById('answer_3').innerHTML = question['answer_3'];
-        document.getElementById('answer_4').innerHTML = question['answer_4'];
+        if (currentquestion == questions.length) {
+
+            document.getElementById('question-footer').classList.add('d-none');
+            document.getElementById('answercontainer').classList.add('d-none');
+            document.getElementById('finalscore').classList.remove('d-none')
+            resetanswerfields();
+
+        } else {
+            let question = questions[currentquestion];  // die variable question ist das array questions an der stelle von der zahl von current question
+            document.getElementById('questiontext').innerHTML = question['question'];
+            document.getElementById('answer_1').innerHTML = question['answer_1'];
+            document.getElementById('answer_2').innerHTML = question['answer_2'];
+            document.getElementById('answer_3').innerHTML = question['answer_3'];
+            document.getElementById('answer_4').innerHTML = question['answer_4'];
+        }
     }
 }
 
-function answer(selection) {
+function answer(selection) { // selection ist jetzt der name der id, weil wir das in der html datei so eingegeben haben
 
     let question = questions[currentquestion];
     // die variable question ist das array questions an der stelle von der zahl von current question
-    let selectedquestionnumber = selection.slice(-1);  // hiermit holt man sich die letzte stelle also buchstabe von dem wert
+    let selectedquestionnumber = selection.slice(-1);  // hiermit holt man sich die letzte stelle also buchstabe von dem wert (x) ist die länge eder zeichen, die geholt wird.
     if (selectedquestionnumber == question['right_answer']) {
         document.getElementById(selection).classList.remove('white');
         document.getElementById(selection).classList.add('green');
