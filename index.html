@@ -5,8 +5,8 @@
     <title>Quis Latina</title>
     <link rel="stylesheet" href="style.css">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
     <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+
     <script src="script.js"></script>
 
 
@@ -19,9 +19,9 @@
     <div class="bgrcontainer">
         <div class="bgrquiz">
             <div class="questioncontainer">
-                <h1 class="text-center questionfield">QUIS LATINA</h1>
+                <h1 class="text-center question-field">QUIS LATINA</h1>
                 <p class="text-center" id="questionstyle">Wie lautet die genaue Übersetzung dieses Satzes?</p>
-                <h2 class="questionfield text-center" id="questiontext"></h2>
+                <h2 class="question-field text-center" id="questiontext"></h2>
             </div>
             <div id="answercontainer" class="answercontainer">
                 <div class="answerrow">
@@ -36,20 +36,19 @@
             </div>
             <div id="question-footer" class="question-footer">
                 <span id="questioncountingspan">
-                    <b id="questionnumber"></b> von <b id="amountofquestions">5</b> Fragen
+                    <b id="questionnumber">x</b> von <b id="amountofquestions">y</b> Fragen
                 </span>
+
+                <div id="progress" class="progress">
+                         </div>
+
                 <button onclick="nextquestion()" id="nextquestionbutton" class="nextquestionbutton" disabled>Nächste
                     Frage</button>
             </div>
 
             <!-- down here the final score you made -->
             <div class="d-none" id="finalscore">
-                <span>
-                    <p>Du hast<b>5</b>von<b>5</b>Fragen richtig!</p>
-                </span>
-                <button onclick="showendscreen()" id="" class="nextquestionbutton"><a
-                        href="http://johannes-guenther.developerakademie.net/LATINA%20SIMPLEX/">Zurück zur
-                        Startseite</a></button>
+
             </div>
         </div>
     </div>

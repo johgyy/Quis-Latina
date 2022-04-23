@@ -63,13 +63,13 @@ text-decoration: none;
     margin-bottom: 24px;
 }
 
-.questionfield {
+.question-field {
     width: 100%;
     padding-top: 12px;
     padding-bottom: 12px;
-    /* background-color: rgb(245, 241, 241); */
+    margin-top: 12px;
+    margin-bottom: 12px;
     background-color: rgb(249, 71, 71);
-
 }
 
 .answercontainer{
@@ -139,7 +139,7 @@ text-decoration: none;
     background-color: rgb(249, 71, 71);
     color: white;
     font-size: 1.3em;
-    margin-bottom: 24px;
+
     border-color: white;
     /* border-style: groove; */
     border-width: 5px;
@@ -154,10 +154,36 @@ text-decoration: none;
     width: 1000px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
 }
 
 .endscreen {
     height: 120px;
     width: 800px;
+}
+
+
+.progress {
+    width: 500px;
+    background-color: rgb(249, 71, 71);;
+    height: 21px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: white;
+
+}
+
+.progress-bar {
+    background-color:  rgb(143, 46, 46);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    height: 21px;
+    text-align: center;
+    color: white;
+}
+
+.progressbarborderstyleleft {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
