@@ -1,4 +1,20 @@
 let questions = [{
+    "question": "Puellam videt",
+    "answer_1": "Das Mädchen sieht",
+    "answer_2": "Er sieht das Mädchen",
+    "answer_3": "Die Mädchen sehen",
+    "answer_4": "Sie sieht die Mädchen",
+    "right_answer": 2
+},
+{
+    "question": "Dominum Servus audit",
+    "answer_1": "Der Herr hört den Sklaven",
+    "answer_2": "Der Sklave hört die Herrin",
+    "answer_3": "Die Sklaven hören den Herren",
+    "answer_4": "Der Sklave hört den Herren",
+    "right_answer": 2
+},
+{
     "question": "Gallia in partes tres dividitur",
     "answer_1": "Gallien wurde in 3 Teile geteilt",
     "answer_2": "In Gallien wird auf 3 Partys ausgeteilt",
@@ -163,6 +179,7 @@ function restart() {
     document.getElementById('answercontainer').classList.remove('d-none');
     document.getElementById('finalscore').classList.add('d-none');
     document.getElementById('nextquestionbutton').innerHTML = 'Nächste Frage';
+    document.getElementById('questionstyle').innerHTML = 'Wie lautet die genaue Übersetzung dieses Satzes?';
 }
 
 function enableanswerfields() {
